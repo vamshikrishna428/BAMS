@@ -18,6 +18,8 @@ public class SampleTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://goodtaste.fleksa.de/en");
 		driver.manage().window().maximize();
+
+		// here i need to handle popup, after this click on 'menu'
 		driver.findElement(By.xpath("//h2[contains(text(),'MENU')]")).click();
 		WebElement dessert = driver.findElement(By.xpath("//h2[contains(text(),'Dessert')]"));
 		JavascriptExecutor j = (JavascriptExecutor) driver;
